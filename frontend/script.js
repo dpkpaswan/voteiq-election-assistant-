@@ -5,7 +5,7 @@
    ============================================================ */
 
 // ─── CONFIG ───
-const API_BASE = "http://localhost:8000";
+const API_BASE = "https://voteiq-backend-817820730147.asia-south1.run.app";
 
 // ─── STATE ───
 let currentMode = "guide";
