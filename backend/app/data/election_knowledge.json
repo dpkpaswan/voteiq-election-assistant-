@@ -1,0 +1,73 @@
+{
+  "registration": {
+    "description": "Voter registration in India is the process of getting your name included in the Electoral Roll managed by the Election Commission of India.",
+    "deadline": "Continuous process; special revision drives are conducted before major elections",
+    "methods": [
+      "Online via NVSP portal",
+      "Mobile app (Voter Helpline App)",
+      "Offline through Booth Level Officer (BLO)"
+    ],
+    "requirements": [
+      "Indian citizen",
+      "18 years or above",
+      "Resident of the constituency"
+    ],
+    "how_to_check": "Search your name on the NVSP website or Voter Helpline App"
+  },
+
+  "important_dates": [
+    {
+      "event": "Electoral Roll Revision",
+      "description": "Updating voter lists before elections"
+    },
+    {
+      "event": "Election Announcement",
+      "description": "Election Commission announces schedule and phases"
+    },
+    {
+      "event": "Nomination Filing",
+      "description": "Candidates submit nomination papers"
+    },
+    {
+      "event": "Campaign Period",
+      "description": "Political parties and candidates प्रचार their agenda"
+    },
+    {
+      "event": "Voting Days (Phased)",
+      "description": "Voting happens in multiple phases across states"
+    },
+    {
+      "event": "Counting Day",
+      "description": "Votes are counted and results declared"
+    }
+  ],
+
+  "voting_methods": {
+    "in_person": "Primary method; voters cast vote at assigned polling booth using EVM (Electronic Voting Machine)",
+    "postal_ballot": "Available for service voters, senior citizens (80+), and persons with disabilities",
+    "proxy_voting": "Allowed for armed forces personnel under specific conditions"
+  },
+
+  "required_documents": {
+    "primary": "EPIC (Voter ID Card)",
+    "alternative": [
+      "Aadhaar Card",
+      "Passport",
+      "Driving License",
+      "PAN Card",
+      "Government-issued ID approved by ECI"
+    ]
+  },
+
+  "polling_place_info": {
+    "where_to_find": "Check Voter Slip, NVSP website, or Voter Helpline App",
+    "hours": "Typically 7 AM – 6 PM (may vary slightly by region)",
+    "machine_used": "EVM with VVPAT (Voter Verifiable Paper Audit Trail)"
+  },
+
+  "election_types": {
+    "lok_sabha": "National elections to elect Members of Parliament",
+    "vidhan_sabha": "State legislative assembly elections",
+    "local_body": "Municipal and Panchayat elections"
+  }
+}
