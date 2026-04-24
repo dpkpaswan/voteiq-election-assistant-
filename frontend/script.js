@@ -28,6 +28,9 @@ function dismissOnboarding() {
         document.getElementById("app").style.display = "flex";
         localStorage.setItem("voteiq_onboarded", "true");
         checkBackendHealth();
+
+        // Firebase Analytics: track onboarding completion
+        if (window.trackEvent) trackEvent('onboarding_complete');
     }, 400);
 }
 
@@ -148,6 +151,10 @@ async function sendMessage() {
             addMessage("assistant", "⚠️ Unexpected response format. Please try again.");
         }
 
+        // Firebase Analytics: track chat interaction
+        if (window.trackEvent) trackEvent('chat_message', { intent: data?.data?.intent || 'unknown', mode: currentMode });
+
+
     } catch (err) {
         removeTypingIndicator();
 
@@ -166,6 +173,9 @@ function useSuggestion(text) {
     input.value = text;
     updateCharCount();
     sendMessage();
+
+    // Firebase Analytics: track suggestion click
+    if (window.trackEvent) trackEvent('suggestion_click', { text: text.substring(0, 50) });
 }
 
 
@@ -312,6 +322,9 @@ function setMode(mode, btn) {
     // Update active state
     document.querySelectorAll(".mode-btn").forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
+
+    // Firebase Analytics: track mode switch
+    if (window.trackEvent) trackEvent('mode_switch', { mode: mode });
 
     // If switching to Timeline or Guide, optionally auto-fetch
     if (mode === "timeline") {

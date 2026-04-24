@@ -5,9 +5,17 @@ fastapi==0.104.1
 uvicorn[standard]==0.24.0
 
 # -----------------------------
-# 🤖 GOOGLE GEMINI (AI Service)
+# 🤖 GOOGLE AI (Gemini)
 # -----------------------------
-google-generativeai>=0.3.2
+google-generativeai>=0.8.0
+
+# -----------------------------
+# ☁️ GOOGLE CLOUD SERVICES
+# -----------------------------
+google-cloud-logging>=3.8.0
+google-cloud-firestore>=2.14.0
+google-cloud-secret-manager>=2.16.0
+google-cloud-storage>=2.14.0
 
 # -----------------------------
 # 📦 DATA VALIDATION
@@ -20,7 +28,7 @@ pydantic==2.5.0
 python-dotenv==1.0.0
 
 # -----------------------------
-# 🌐 HTTP CLIENT (for testing & async calls)
+# 🌐 HTTP CLIENT
 # -----------------------------
 httpx==0.25.1
 
@@ -31,6 +39,6 @@ pytest==7.4.3
 pytest-asyncio==0.21.1
 
 # -----------------------------
-# 🖼️ TEMPLATING (optional)
+# 🖼️ TEMPLATING
 # -----------------------------
 jinja2==3.1.2
