@@ -5,7 +5,7 @@
   <img src="https://img.shields.io/badge/Google%20Gemini-AI-4285F4?style=for-the-badge&logo=google&logoColor=white" />
   <img src="https://img.shields.io/badge/Google%20Cloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" />
   <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" />
-  <img src="https://img.shields.io/badge/Tests-121%20Passed-success?style=for-the-badge&logo=pytest" />
+  <img src="https://img.shields.io/badge/Tests-154%20Passed-success?style=for-the-badge&logo=pytest" />
   <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" />
 </p>
 
@@ -218,20 +218,23 @@ VoteIQ/
 │   │   │   ├── firestore_service.py   #   ☁️ Cloud Firestore
 │   │   │   ├── cloud_logging_service.py  # ☁️ Cloud Logging
 │   │   │   ├── secret_manager_service.py # ☁️ Secret Manager
-│   │   │   └── cloud_storage_service.py  # ☁️ Cloud Storage
+│   │   │   ├── cloud_storage_service.py  # ☁️ Cloud Storage
+│   │   │   └── base.py                #   ✨ Abstract base service
 │   │   ├── 📁 utils/
 │   │   │   └── validators.py          #   Input sanitization
 │   │   ├── 📁 data/
 │   │   │   └── election_knowledge.json
 │   │   ├── config.py                  # Config + Secret Manager
+│   │   ├── constants.py               # ✨ Centralized constants
 │   │   ├── main.py                    # Entry point
 │   │   ├── models.py                  # Pydantic schemas
 │   │   └── server.py                  # App factory + Cloud Logging
-│   ├── 📁 tests/                      # 121 tests ✅
+│   ├── 📁 tests/                      # 154 tests ✅
 │   │   ├── test_api.py                #   30 API endpoint tests
+│   │   ├── test_constants.py          #   35 constants + base tests
+│   │   ├── test_google_services.py    #   39 Google Cloud tests
 │   │   ├── test_validators.py         #   28 security tests
 │   │   ├── test_steps.py              #   14 step service tests
-│   │   ├── test_google_services.py    #   39 Google Cloud tests
 │   │   ├── test_timeline.py           #   5 timeline tests
 │   │   ├── test_intent.py             #   4 intent tests
 │   │   └── test_assistant.py          #   1 assistant test
@@ -389,7 +392,7 @@ pytest tests/ -v
 ```
 
 ```
-====================== 121 passed in 59.64s =======================
+================= 154 passed in 232.24s =================
 ```
 
 ### Test Coverage
@@ -397,13 +400,14 @@ pytest tests/ -v
 | Test Suite | Tests | What It Covers |
 |------------|:-----:|----------------|
 | `test_google_services.py` | **39** | Cloud Logging, Firestore, Secret Manager, GCS, Gemini Sessions |
+| `test_constants.py` | **35** | Constants, base service, type safety, module structure |
 | `test_api.py` | 30 | All HTTP endpoints, error responses, security headers |
 | `test_validators.py` | 28 | Input validation, sanitization, prompt injection, XSS |
 | `test_steps.py` | 14 | Step guides, data quality, serialization |
 | `test_timeline.py` | 5 | Timeline data, deadlines, event search |
 | `test_intent.py` | 4 | Intent classification, keyword fallback |
 | `test_assistant.py` | 1 | Assistant orchestration fallback |
-| **Total** | **121** | **Full coverage across all services** |
+| **Total** | **154** | **Full coverage across all services** |
 
 ---
 
